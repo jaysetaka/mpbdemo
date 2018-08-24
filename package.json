@@ -1,0 +1,13 @@
+{
+  "name": "jobcard",
+  "version": "1.0.0",
+  "description": "test app",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jabu",
+  "license": "MIT"
+}

@@ -1,0 +1,80 @@
+ {{!--
+<div class="card card-body mb-2"> --}} {{#each ideas}}
+  <div class="row mb-3">
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{taskid}}</li>
+              <li class="list-group-item">{{assignedto}}</li>
+              <li class="list-group-item">{{details}}</li>
+              <li class="list-group-item">{{address}}</li>
+              <li class="list-group-item">{{customername}}</li>
+              <li class="list-group-item">{{standnumber}}</li>
+              <li class="list-group-item">{{meterno}}</li>
+              <li class="list-group-item">{{metertype}}</li>
+              <li class="list-group-item">{{reading}}</li>
+              <li class="list-group-item">{{waterleaks}}</li>
+            </ul>
+          </p>
+          <a href="#" class="btn btn-success">Accept</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Task Is Assigned To</h5>
+          <h3 class="card-text">{{assignedto}}</h3>
+          <a href="#" class="btn btn-success">Completed</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {{!--
+  <div class="card text-center">
+    <div class="card-header">
+      Jobs To Be Done
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{title}}</h5>
+      <p class="card-text">{{details}}</p>
+      <a href="#" class="btn btn-success">Accept Job Request</a>
+      <a class="btn btn-dark" href="/ideas/edit/{{id}}">Edit The Request</a>
+
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div> --}} {{!--
+    <h4>{{title}}</h4>
+    <p>{{details}}</p> --}} {{!--
+  </div> --}} {{!--
+  <form method="post" action="/ideas/{{id}}?_method=DELETE">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" class="btn btn-danger btn-block mt-2" value="Delete">
+  </form> --}} {{!--
+</div> --}} {{else}}
+<h5 class="text-white">No Job Card Post</h5>
+{{/each}}
