@@ -4,8 +4,5 @@
 }
 
 body {
-  background-image: url('../img/pressure.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background-image: #95a5a6;
 }
