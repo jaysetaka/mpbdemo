@@ -86,23 +86,25 @@
 </div>
 {{!-- end of modal --}}
 <div class="card card-body mb-2">
-  <span>Consultant</span>
+  <span class="text-center lead text-white" style="background:#34495e">Consultant</span>
   <hr> {{!-- Consultant --}}
   <p>Task ID: {{taskid}}</p>
   <p>Action: {{action}}</p>
   <p>Problem: {{problem}}</p>
   <p>Address: {{address}}</p>
   <p>Suburb: {{suburb}}</p>
-  <p>Customer Name{{customername}}</p>
+  <p>Customer Name: {{customername}}</p>
+  <a class="mb-2 ml-auto" href="/ideas/edit/{{id}}"><button class="btn btn-primary"><i class="fa fa-pencil"></i> Update</button></a>
   {{!-- Contractor --}}
   <hr>
-  <span>Contractor</span>
+  <span class="text-center lead text-white" style="background:#c0392b">Contractor</span>
   <hr>
   <p>Assigned To: {{assignedto}}</p>
   <p>Status: {{status}}</p>
+  <a class="mb-2 ml-auto" href="/ideas/edit/{{id}}"><button class="btn btn-primary"><i class="fa fa-pencil"></i> Update</button></a>
   {{!-- Service Worker --}}
   <hr>
-  <span>Service Worker</span>
+  <span class="text-center lead text-white" style="background: #1abc9c">Service Worker</span>
   <hr>
   <p>Stand Number: {{standnumber}}</p>
   <p>Street Number: {{streetnumber}}</p>
@@ -114,7 +116,7 @@
   <p>Aged Replacement: {{agedreplacement}}</p>
   <p>Waterleaks: {{waterleaks}}</p>
   <p>Fittings Used: {{fittingsused}}</p>
-  <a class="btn btn-dark btn-block mb-2" href="/ideas/edit/{{id}}">Update</a>
+  <a class="mb-2 ml-auto" href="/ideas/edit/{{id}}"><button class="btn btn-primary"><i class="fa fa-pencil"></i> Update</button></a>
   {{!-- <form method="post" action="/ideas/{{id}}?_method=DELETE">
     <input type="hidden" name="_method" value="DELETE">
     <input type="submit" class="btn btn-danger btn-block" value="Delete">
