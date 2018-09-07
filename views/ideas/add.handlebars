@@ -2,6 +2,8 @@
   <h3>Job Card</h3>
   <form action="/ideas" method="post">
     {{!-- Consultant --}}
+    <span>Consultant</span>
+    <hr>
     <div class="form-group">
       <label for="taskid">Task Id</label>
       <input type="text" name="taskid" class="form-control">
@@ -27,6 +29,9 @@
       <input type="text" name="customername" class="form-control">
     </div>
     {{!-- Contractor --}}
+    <hr>
+    <span>Contractor</span>
+    <hr>
     <div class="form-group">
       <label for="assignedto">Assign JC To:</label>
       <input type="text" name="assignedto" class="form-control">
@@ -36,7 +41,9 @@
       <input type="text" name="status" class="form-control">
     </div>
     {{!-- Service Worker --}}
-
+    <hr>
+    <span>Service Worker</span>
+    <hr>
     <div class="form-group">
       <label for="standnumber">Stand Number</label>
       <input type="text" name="standnumber" class="form-control">

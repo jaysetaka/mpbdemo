@@ -6,6 +6,8 @@
   <h3>Update Job Card</h3>
   <form action="/ideas/{{idea.id}}?_method=PUT" method="post">
     <input type="hidden" name="_method" value="PUT"> {{!-- Consultant --}}
+    <span>Consultant</span>
+    <hr>
     <div class="form-group">
       <label for="taskid">taskid</label>
       <textarea class="form-control" name="taskid">{{idea.taskid}}</textarea>
@@ -31,15 +33,27 @@
       <textarea class="form-control" name="customername">{{idea.customername}}</textarea>
     </div>
     {{!-- contractor --}}
+    <hr>
+    <span>Contractor</span>
+    <hr>
     <div class="form-group">
       <label for="assignedto">assignedto</label>
-      <textarea class="form-control" name="assignedto">{{idea.assignedto}}</textarea>
+      {{!-- <textarea class="form-control" name="assignedto">{{idea.assignedto}}</textarea> --}}
+      <select class="custom-select" name="assignedto">
+        <option value="1" selected>{{idea.assignedto}}</option>
+        <option value="2">John Doe</option>
+        <option value="3">Brada Man</option>
+        <option value="4">Fred</option>
+      </select>
     </div>
     <div class="form-group">
       <label for="status">status</label>
       <textarea class="form-control" name="status">{{idea.status}}</textarea>
     </div>
     {{!-- service worker --}}
+    <hr>
+    <span>Service Worker</span>
+    <hr>
     <div class="form-group">
       <label for="standnumber">standnumber</label>
       <textarea class="form-control" name="standnumber">{{idea.standnumber}}</textarea>
