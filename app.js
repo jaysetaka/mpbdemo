@@ -26,7 +26,7 @@ mongoose
   .connect(
     db.mongoURI,
     {
-      useMongoClient: true
+      useNewUrlParser: true
     }
   )
   .then(() => console.log("MongoDB Connected..."))

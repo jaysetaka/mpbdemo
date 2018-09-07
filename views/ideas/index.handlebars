@@ -1,11 +1,11 @@
 <div class="card-deck mb-3">
   <div class="card mb-3">
     <div class="card-body">
-      <h5 class="card-title">Employee</h5>
+      <h5 class="card-title">Service Worker</h5>
       <p class="card-text">An An employee of mpb you are to click here view job cards or you can view them below</p>
     </div>
     <div class="card-footer">
-      <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal">Complete/View
+      <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal2">Complete/View
         Jobcards
       </button>
 
@@ -19,7 +19,8 @@
         completed jobcards</p>
     </div>
     <div class="card-footer">
-      <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal">Assign jobcards</button>
+      <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal">Assign jobcards
+      </button>
 
 
 
@@ -47,7 +48,8 @@
         </button>
       </div>
       <div class="modal-body">
-        {{title}}
+        <p>Task ID: {{taskid}}</p>
+        <p>Assigned To: {{assignedto}}</p>
         <a class="btn btn-dark px-5" href="/ideas/edit/{{id}}">Assign To</a>
       </div>
       <div class="modal-footer">
@@ -59,7 +61,7 @@
 </div>
 {{!-- end of modal --}} {{!-- modal --}}
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -69,7 +71,10 @@
         </button>
       </div>
       <div class="modal-body">
-        {{title}} {{details}}
+        <p>Task ID: {{taskid}}</p>
+        <p>Action: {{action}}</p>
+        <p>Address: {{address}}</p>
+        <p>Customer Name: {{customername}}</p>
         <a class="btn btn-dark px-5" href="/ideas/edit/{{id}}">Complete</a>
       </div>
       <div class="modal-footer">
@@ -81,23 +86,39 @@
 </div>
 {{!-- end of modal --}}
 <div class="card card-body mb-2">
-  <h4>Title: {{title}}</h4>
-  <p>Details: {{details}}</p>
+  <span>Consultant</span>
+  <hr> {{!-- Consultant --}}
   <p>Task ID: {{taskid}}</p>
   <p>Action: {{action}}</p>
+  <p>Problem: {{problem}}</p>
   <p>Address: {{address}}</p>
   <p>Suburb: {{suburb}}</p>
   <p>Customer Name{{customername}}</p>
-  <p>Problem: {{problem}}</p>
-  <p>Meter Number: {{meterno}}</p>
-  <p>Meter Type: {{metertype}}</p>
-  <p>Domestic: {{domestic}}</p>
-  <p>Status: Pending</p>
-  <a class="btn btn-dark btn-block mb-2" href="/ideas/edit/{{id}}">Edit</a>
-  <form method="post" action="/ideas/{{id}}?_method=DELETE">
+  {{!-- Contractor --}}
+  <hr>
+  <span>Contractor</span>
+  <hr>
+  <p>Assigned To: {{assignedto}}</p>
+  <p>Status: {{status}}</p>
+  {{!-- Service Worker --}}
+  <hr>
+  <span>Service Worker</span>
+  <hr>
+  <p>Stand Number: {{standnumber}}</p>
+  <p>Street Number: {{streetnumber}}</p>
+  <p>Street Name: {{streetname}}</p>
+  <p>Meter Number: {{meternumber}}</p>
+  <p>Metertype: {{metertype}}</p>
+  <p>Reading: {{reading}}</p>
+  <p>Dails: {{dails}}</p>
+  <p>Aged Replacement: {{agedreplacement}}</p>
+  <p>Waterleaks: {{waterleaks}}</p>
+  <p>Fittings Used: {{fittingsused}}</p>
+  <a class="btn btn-dark btn-block mb-2" href="/ideas/edit/{{id}}">Update</a>
+  {{!-- <form method="post" action="/ideas/{{id}}?_method=DELETE">
     <input type="hidden" name="_method" value="DELETE">
     <input type="submit" class="btn btn-danger btn-block" value="Delete">
-  </form>
+  </form> --}}
 </div>
 {{else}}
 <p>No Job Card Listed</p>

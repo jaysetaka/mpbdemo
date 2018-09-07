@@ -3,15 +3,24 @@ const Schema = mongoose.Schema;
 
 // Create Schema
 const IdeaSchema = new Schema({
-  title: {
+  // consultants
+  taskid: {
     type: String,
     required: true
   },
-  details: {
-    type: String,
-    required: true
+  date: {
+    type: Date,
+    default: Date.now
   },
   user: {
+    type: String,
+    required: true
+  },
+  action: {
+    type: String,
+    required: true
+  },
+  problem: {
     type: String,
     required: true
   },
@@ -19,7 +28,7 @@ const IdeaSchema = new Schema({
     type: String,
     required: true
   },
-  taskid: {
+  suburb: {
     type: String,
     required: true
   },
@@ -27,19 +36,29 @@ const IdeaSchema = new Schema({
     type: String,
     required: true
   },
+  // contractor
+  assignedto: {
+    type: String,
+    required: true
+  },
+  status: {
+    type: String,
+    required: true
+  },
+  // service worker
   standnumber: {
     type: String,
     required: true
   },
-  meterno: {
+  streetnumber: {
     type: String,
     required: true
   },
-  metermake: {
+  streetname: {
     type: String,
     required: true
   },
-  reading: {
+  meternumber: {
     type: String,
     required: true
   },
@@ -47,7 +66,19 @@ const IdeaSchema = new Schema({
     type: String,
     required: true
   },
-  assignedto: {
+  reading: {
+    type: String,
+    required: true
+  },
+  dails: {
+    type: String,
+    required: true
+  },
+  size: {
+    type: String,
+    required: true
+  },
+  agedreplacement: {
     type: String,
     required: true
   },
@@ -55,9 +86,9 @@ const IdeaSchema = new Schema({
     type: String,
     required: true
   },
-  date: {
-    type: Date,
-    default: Date.now
+  fittingsused: {
+    type: String,
+    required: true
   }
 });
 

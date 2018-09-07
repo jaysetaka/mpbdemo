@@ -1,21 +1,90 @@
 {{#each errors}}
-  <div class="alert alert-danger">{{text}}</div>
-{{else}}
-
-{{/each}}
+<div class="alert alert-danger">{{text}}</div>
+{{else}} {{/each}}
 
 <div class="card card-body">
-  <h3>Edit Video Idea</h3>
+  <h3>Update Job Card</h3>
   <form action="/ideas/{{idea.id}}?_method=PUT" method="post">
-    <input type="hidden" name="_method" value="PUT">
+    <input type="hidden" name="_method" value="PUT"> {{!-- Consultant --}}
     <div class="form-group">
-      <label for="title">Title</label>
-      <input type="text" class="form-control" name="title" value="{{idea.title}}" required>
+      <label for="taskid">taskid</label>
+      <textarea class="form-control" name="taskid" required>{{idea.taskid}}</textarea>
     </div>
     <div class="form-group">
-      <label for="details">Details</label>
-      <textarea class="form-control" name="details" required>{{idea.details}}</textarea>
+      <label for="action">action</label>
+      <textarea class="form-control" name="action" required>{{idea.action}}</textarea>
     </div>
+    <div class="form-group">
+      <label for="problem">problem</label>
+      <textarea class="form-control" name="problem" required>{{idea.problem}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="address">address</label>
+      <textarea class="form-control" name="address" required>{{idea.address}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="suburb">suburb</label>
+      <textarea class="form-control" name="suburb" required>{{idea.suburb}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="customername">customername</label>
+      <textarea class="form-control" name="customername" required>{{idea.customername}}</textarea>
+    </div>
+    {{!-- contractor --}}
+    <div class="form-group">
+      <label for="assignedto">assignedto</label>
+      <textarea class="form-control" name="assignedto" required>{{idea.assignedto}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="status">status</label>
+      <textarea class="form-control" name="status" required>{{idea.status}}</textarea>
+    </div>
+    {{!-- service worker --}}
+    <div class="form-group">
+      <label for="standnumber">standnumber</label>
+      <textarea class="form-control" name="standnumber" required>{{idea.standnumber}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="streetnumber">streetnumber</label>
+      <textarea class="form-control" name="streetnumber" required>{{idea.streetnumber}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="streetname">streetname</label>
+      <textarea class="form-control" name="streetname" required>{{idea.streetname}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="meternumber">meternumber</label>
+      <textarea class="form-control" name="meternumber" required>{{idea.meternumber}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="metertype">metertype</label>
+      <textarea class="form-control" name="metertype" required>{{idea.metertype}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="reading">reading</label>
+      <textarea class="form-control" name="reading" required>{{idea.reading}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="dails">dails</label>
+      <textarea class="form-control" name="dails" required>{{idea.dails}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="size">size</label>
+      <textarea class="form-control" name="size" required>{{idea.size}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="agedreplacement">agedreplacement</label>
+      <textarea class="form-control" name="agedreplacement" required>{{idea.agedreplacement}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="waterleaks">waterleaks</label>
+      <textarea class="form-control" name="waterleaks" required>{{idea.waterleaks}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="fittingsused">fittingsused</label>
+      <textarea class="form-control" name="fittingsused" required>{{idea.fittingsused}}</textarea>
+    </div>
+
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
