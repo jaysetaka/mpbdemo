@@ -5,10 +5,12 @@ const Schema = mongoose.Schema;
 const IdeaSchema = new Schema({
   // consultants
 
-  taskid: {
-    type: String,
-    required: true
-  },
+  taskid: [
+    {
+      type: String,
+      required: true
+    }
+  ],
 
   date: {
     type: Date,

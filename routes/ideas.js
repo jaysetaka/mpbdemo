@@ -7,6 +7,8 @@ const { ensureAuthenticated } = require("../helpers/auth");
 require("../models/Idea");
 const Idea = mongoose.model("ideas");
 
+let taskid = [];
+
 // Idea Index Page
 router.get("/", (req, res) => {
   Idea.find()
@@ -216,5 +218,7 @@ router.delete("/:id", ensureAuthenticated, (req, res) => {
 router.get("/status", ensureAuthenticated, (req, res) => {
   res.render("ideas/status");
 });
+
+console.log(taskid.length);
 
 module.exports = router;
