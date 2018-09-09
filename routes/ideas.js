@@ -10,7 +10,7 @@ const Idea = mongoose.model("ideas");
 let taskid = [];
 
 // Idea Index Page
-router.get("/", (req, res) => {
+router.get("/", ensureAuthenticated, (req, res) => {
   Idea.find()
     .sort({ date: "desc" })
     .then(ideas => {
@@ -49,6 +49,9 @@ router.post("/", ensureAuthenticated, (req, res) => {
   // consultant
   if (!req.body.taskid) {
     errors.push({ text: "Please add a task id" });
+  } else {
+    taskid.push(req.body.taskid);
+    console.log(taskid.length);
   }
 
   if (!req.body.action) {
@@ -218,7 +221,5 @@ router.delete("/:id", ensureAuthenticated, (req, res) => {
 router.get("/status", ensureAuthenticated, (req, res) => {
   res.render("ideas/status");
 });
-
-console.log(taskid.length);
 
 module.exports = router;
